@@ -1,4 +1,4 @@
-# thence-react-internship-task
+# Thence-react-internship-task
 Thence react internship task. 
 
 # Tech Stack Used: 
