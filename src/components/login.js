@@ -18,11 +18,15 @@ function Login() {
   const handleEmailChange = (e) => {
     const newEmail = e.target.value;
     setEmail(newEmail);
-    // Check if email is valid
-    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newEmail);
-    setIsValidEmail(isValid);
+    // Only validate email when input value changes
+    if (newEmail !== '') {
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newEmail);
+      setIsValidEmail(isValid);
+    } else {
+      setIsValidEmail(false);
+    }
     // Check if form is valid
-    setIsFormValid(isValid && name !== '');
+    setIsFormValid(isValidEmail && name !== '');
   };
 
   const handleSubmit = (e) => {
@@ -36,7 +40,7 @@ function Login() {
     <div className="flex flex-col justify-center items-center gap-32">
       <nav>
         <LoginNav />
-      </nav>
+     </nav>
       <form onSubmit={handleSubmit} className="w-[588px] h-[538.22px] bg-white flex flex-col items-center justify-center">
         <div className='flex flex-col justify-center items-center '>
           <p className='font-CBYG text-[#2DA950] text-[36px] mb-2'>Registration Form</p>
@@ -63,7 +67,7 @@ function Login() {
             value={email}
             onChange={handleEmailChange}
           />
-          {!isValidEmail && <p className="text-red-500 text-xs italic ml-2 mt-4">Please enter a valid email.</p>}
+          {!isValidEmail && email !== '' && <p className="text-red-500 text-xs italic ml-2 mt-4">Please enter a valid email.</p>}
         </div>
         <div className="flex items-center justify-between">
           {isFormValid ? (
