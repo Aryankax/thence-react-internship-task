@@ -11,6 +11,8 @@ function Login() {
   const handleNameChange = (e) => {
     const newName = e.target.value;
     setName(newName);
+    // Check if form is valid
+    setIsFormValid(isValidEmail && newName !== '');
   };
 
   const handleEmailChange = (e) => {
@@ -64,15 +66,15 @@ function Login() {
           {!isValidEmail && <p className="text-red-500 text-xs italic ml-2 mt-4">Please enter a valid email.</p>}
         </div>
         <div className="flex items-center justify-between">
-          <Link to='/congratulations'
-            className={`${
-              isFormValid ? 'bg-[#d1d1d1] hover:bg-black' : 'bg-gray-500'
-            } text-white font-bold py-2 px-4 rounded-full  focus:outline-none focus:shadow-outline w-[220px] mt-3`}
-            type="submit"
-            disabled={!isFormValid}
-          >
-            Submit
-          </Link>
+          {isFormValid ? (
+            <Link to='/congratulations' className="bg-[#d1d1d1] hover:bg-black text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline w-[220px] mt-3">
+              Submit
+            </Link>
+          ) : (
+            <button className="bg-gray-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline w-[220px] mt-3" disabled>
+              Submit
+            </button>
+          )}
         </div>
       </form>
     </div>
