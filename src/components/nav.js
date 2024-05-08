@@ -14,7 +14,7 @@ function Nav() {
                     Get Projects
                 </button>
                 <Link to='/login' className='border rounded-full p-5 m-1 text-sm bg-black text-white w-40 transition-transform hover:scale-95 font-Manrope 
-                transition duration-300 delay-50 hover:text-black hover:bg-white'>
+                transition duration-300 delay-50 hover:text-black hover:bg-white text-center'>
                 Onboard Talent
                 </Link>
             </div>
