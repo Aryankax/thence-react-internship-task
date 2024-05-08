@@ -37,7 +37,7 @@ function Login() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-32">
+    <div className="flex flex-col justify-center items-center gap-15">
       <nav>
         <LoginNav />
      </nav>
