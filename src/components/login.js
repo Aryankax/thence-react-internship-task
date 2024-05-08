@@ -44,7 +44,7 @@ function Login() {
       <form onSubmit={handleSubmit} className="w-[588px] h-[538.22px] bg-white flex flex-col items-center justify-center">
         <div className='flex flex-col justify-center items-center '>
           <p className='font-CBYG text-[#2DA950] text-[36px] mb-2'>Registration Form</p>
-          <p className='font-Manrope font-semibold text-[36px]  m-1'>Start your success Journey here!</p>
+          <p className='font-Manrope font-semibold text-[36px]  m-1 p-2 text-center'>Start your success <br/> Journey here!</p>
         </div>
         <div className="mb-6">
           <input
