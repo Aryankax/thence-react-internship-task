@@ -35,3 +35,4 @@ The website should now be up and ready to run locally on port 3000. Enjoy!!
 
 # Deployed Link: 
 `http://3.111.132.243:3000/`
+`https://thence-react-internship-task.vercel.app/`
