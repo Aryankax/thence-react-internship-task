@@ -9,14 +9,14 @@ function Nav() {
                 <img src={logo} className="h-8 transition-transform hover:scale-x-105" alt='logo'></img>
             </div>
             <div className='buttons flex items-center gap-2'>
-                <button className='border rounded-full p-5 m-1 text-sm w-36 transition-transform hover:scale-95 font-Manrope 
+                <Link to='/login' className='border rounded-full p-5 m-1 text-sm w-36 transition-transform hover:scale-95 font-Manrope 
                 transition duration-300 delay-50 hover:text-white hover:bg-black'>
                     Get Projects
-                </button>
-                <Link to='/login' className='border rounded-full p-5 m-1 text-sm bg-black text-white w-40 transition-transform hover:scale-95 font-Manrope 
+                </Link>
+                <button className='border rounded-full p-5 m-1 text-sm bg-black text-white w-40 transition-transform hover:scale-95 font-Manrope 
                 transition duration-300 delay-50 hover:text-black hover:bg-white text-center'>
                 Onboard Talent
-                </Link>
+                </button>
             </div>
          </nav>
     )
